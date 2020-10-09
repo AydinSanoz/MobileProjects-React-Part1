@@ -1,58 +1,37 @@
-import React from 'react'
-import { SafeAreaView, View, ScrollView, KeyboardAvoidingView, StyleSheet, Image, Dimensions, Platform } from 'react-native'
-
-import { MyInput, MyButton} from './components'
-
-const LoginPage = () => {
-
-  const onLogin = () => {
-    console.log("Login pressed")
-  }
-
-  const onSign = () => {
-    console.log("Sign pressed")
-  }
-
-  return (
-    <SafeAreaView style={{flex: 1}}>
-      <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : null}
-        style={styles.container}
-      >
-        <ScrollView style={{ flex: 1 }} bounces={false}>
-          <View style={{ flex: 1 }}>
-
-            <Image
-              style={styles.imageStyle}
-              source={require('./assets/cart.png')}
-            />
+import React from 'react';
+import {StyleSheet,Image, SafeAreaView, ScrollView,KeyboardAvoidingView, Dimensions, Platform} from 'react-native';
+import InputComp from './components/InputComp';
+import ButtonComp from './components/ButtonComp';
 
 
-            <MyInput type="email-address" myPlace = "E-posta giriniz..." />
-            <MyInput myPlace="Şifre giriniz.." />
+const signIn =() =>{alert('Successfully signed')}
+const logIn = () => {alert('Login Page is opening wait ....')}
 
-            <MyButton myTitle="Giriş Yap" myPress={onLogin} />
-            <MyButton myTitle="Kayıt Ol" myPress={onSign} />
-
-          </View>
-        </ScrollView>
-      </KeyboardAvoidingView>
+const LoginPage = () =>{
+  return(
+    <SafeAreaView style = {{flex:1, backgroundColor : '#c0b3c2'}}>
+      <ScrollView >
+        <KeyboardAvoidingView behavior = {Platform.OS == 'ios'? 'padding' : 'height'}>
+          <Image 
+            style = {styles.containerImage}
+            source ={require('./assets/cart.png')}>
+          </Image>
+          <InputComp title = " E-mail" type = "email-address"/>
+          <InputComp title = " password" type = "numeric"/>
+          <ButtonComp buttonTitle = "Sign in" myPress = {(signIn)}/>
+          <ButtonComp buttonTitle = "Log in" myPress = {(logIn)}/>
+        </KeyboardAvoidingView>
+      </ScrollView>
     </SafeAreaView>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: "#80cbc4"
-  },
-  imageStyle: {
-    width: Dimensions.get("window").width / 2,
-    height: Dimensions.get("window").height / 3,
-    resizeMode: "contain",
-    alignSelf: "center",
-  }
-})
+export default LoginPage ;
 
-export default LoginPage
+const styles= StyleSheet.create({
+  containerImage:{
+    width : Dimensions.get('window').width/2,
+    height : Dimensions.get('window').height/4,
+    alignSelf:'center'
+  },
+})
