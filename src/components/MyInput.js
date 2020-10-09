@@ -1,26 +1,24 @@
-import React from 'react'
-import { TextInput, View, StyleSheet } from 'react-native'
+import React from 'react';
+import {StyleSheet,TouchableOpacity,TextInput} from 'react-native';
 
-const MyInput = props => {
-    return (
-        <View style={styles.inputContainer}>
-            <TextInput
-                keyboardType={props.type}
-                autoCapitalize="none"
-                placeholder={props.myPlace}
-                onChangeText={props.textChange}
-            />
-        </View>
-    )
-}
+const MyInput = (props) => {
+  return(
+      <TextInput
+        style = {styles.containerInput} 
+        placeholder = {props.title}
+        keyboardType = {props.type}
+        autoCapitalize = {props.capitalize}
+        
+      />
+  )
+};
+export default MyInput;
 
 const styles = StyleSheet.create({
-    inputContainer: {
-        backgroundColor: '#eceff1',
-        padding: 3,
-        margin: 20,
-        borderRadius: 10,
-    }
+  containerInput:{
+    backgroundColor: '#e8eaf6',
+    margin :10,
+    padding:20,
+    borderRadius:10,
+  }
 })
-
-export { MyInput }

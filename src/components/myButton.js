@@ -1,31 +1,31 @@
-import React from 'react'
-import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native'
+import React from 'react';
+import { TouchableOpacity,StyleSheet, Dimensions,Text } from 'react-native';
 
-const MyButton = props => {
-    return (
-        <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={props.myPress}
-        >
-            <Text style={styles.textStyle}>{props.myTitle}</Text>
-        </TouchableOpacity>
-    )
+const MyButton= (props) =>{
+  return(
+    <TouchableOpacity 
+        style = {styles.containerButton}
+        onPress = {props.myPress}>
+          <Text style= {styles.Text}>{props.buttonTitle}</Text>
+
+    </TouchableOpacity>
+  )
 }
+export default MyButton;
 
 const styles = StyleSheet.create({
-    buttonContainer: {
-        backgroundColor: '#546e7a',
-        width: Dimensions.get("window").width / 2,
-        alignSelf: 'center',
-        padding: 15,
-        alignItems: 'center',
-        borderRadius: 5,
-        margin: 5
-    },
-    textStyle: {
-        color: 'white',
-        fontWeight: 'bold'
-    }
+  containerButton:{
+    backgroundColor: "#90a4ae",
+    padding:20,
+    margin:10,
+    width: Dimensions.get('window').width/2,
+    borderRadius: 10,
+    alignSelf: 'center',
+  },
+  Text:{
+    color: "white",
+    alignSelf :"center",
+    fontWeight:"bold",
+    fontSize: 15,
+  }
 })
-
-export { MyButton }

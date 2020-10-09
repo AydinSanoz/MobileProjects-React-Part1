@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet,Image, SafeAreaView, ScrollView,KeyboardAvoidingView, Dimensions, Platform} from 'react-native';
-import InputComp from './components/InputComp';
-import ButtonComp from './components/ButtonComp';
+import MyInput from './components/MyInput';
+import MyButton from './components/MyButton';
 
 
 const signIn =() =>{alert('Successfully signed')}
@@ -16,10 +16,10 @@ const LoginPage = () =>{
             style = {styles.containerImage}
             source ={require('./assets/cart.png')}>
           </Image>
-          <InputComp title = " E-mail" type = "email-address"/>
-          <InputComp title = " password" type = "numeric"/>
-          <ButtonComp buttonTitle = "Sign in" myPress = {(signIn)}/>
-          <ButtonComp buttonTitle = "Log in" myPress = {(logIn)}/>
+          <MyInput title = " E-mail" type = "email-address" capitalize = {"none"}/>
+          <MyInput title = " password" type = "numeric"/>
+          <MyButton buttonTitle = "Sign in" myPress = {(signIn)}/>
+          <MyButton buttonTitle = "Log in" myPress = {(logIn)}/>
         </KeyboardAvoidingView>
       </ScrollView>
     </SafeAreaView>
