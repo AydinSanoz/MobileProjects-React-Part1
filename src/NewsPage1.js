@@ -1,7 +1,6 @@
 import React from 'react';
-import { FlatList, SafeAreaView,ScrollView,Text } from 'react-native';
-import NewsCard from './components/NewsCard';
-
+import {SafeAreaView, Text, FlatList} from 'react-native';
+import {NewsCard} from './components';
 
 const data = [
   {
@@ -49,26 +48,23 @@ const data = [
       'https://image.cnbcfm.com/api/v1/image/105737636-1550147305726gettyimages-1034802076rr.jpg?v=1601647142',
   },
 ];
-const NewsPage = () =>{
-    
-  return(
-    <SafeAreaView>
-      <ScrollView>
-        {data.map(news => {
-          return(
-            <NewsCard
-            img = {news.imageUrl}
-            title = {news.title}
-            desc = {news.description}
-            
-            />
-            )
-          })}
-      </ScrollView>
-     
-    </SafeAreaView>
-  )
-}
 
+const NewsPage = () => {
+  const renderData = ({item}) => <NewsCard data={item} />;
+
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <FlatList
+        data={data}
+        renderItem={renderData}
+        ListHeaderComponent={() => <Text style={styles.header}>News</Text>}
+      />
+    </SafeAreaView>
+  );
+};
 
 export default NewsPage;
+
+const styles = {
+  header: {fontSize: 45, padding: 5, fontWeight: 'bold'},
+};

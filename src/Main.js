@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView,View,Text} from 'react-native';
 import MyBanner from './components/MyBanner';
-import AydButton from './components/aydButton';
+import MyButton from './components/MyButton';
 
 const food_data = [
   {
@@ -57,15 +57,11 @@ const App = () =>{
               />
             )
           })}
-        <AydButton 
-        Text ="Yenile"
+        <MyButton 
+        buttonTitle ="Yenile"
         onPress = {() => alert('Hello World')}
         onLongPress = {() => alert('Long Press')}
-        />
-        
-        
-      
-      
+        /> 
     </SafeAreaView>
       
   )

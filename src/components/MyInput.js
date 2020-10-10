@@ -8,6 +8,7 @@ const MyInput = (props) => {
         placeholder = {props.title}
         keyboardType = {props.type}
         autoCapitalize = {props.capitalize}
+        onChangeText = {props.onChangeText}
         
       />
   )

@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, View, Text, Dimensions,StyleSheet} from 'react-native';
+import { View, Text, Dimensions,StyleSheet} from 'react-native';
 
 
 const Flex = () => {
@@ -25,7 +25,6 @@ const Flex = () => {
 
     </View>
   )
-
 }
 const styles = StyleSheet.create({
   containerRed:{
