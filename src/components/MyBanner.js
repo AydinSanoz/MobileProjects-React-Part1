@@ -18,7 +18,7 @@ const MyBanner = (props) => {
   );
 };
 
-export default MyBanner;
+export {MyBanner};
 
 const styles = StyleSheet.create({
   container : {

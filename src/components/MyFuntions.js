@@ -23,4 +23,4 @@ const FiboComponent = () =>{
   )  
 }
   
-export default FiboComponent;
+export {FiboComponent};

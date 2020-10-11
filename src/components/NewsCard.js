@@ -1,53 +1,49 @@
 import React from 'react';
-import {View, Text,StyleSheet,Image, Dimensions} from 'react-native';
+import { View, Image, Text, StyleSheet, Dimensions } from 'react-native';
 
+// {
+//     id: 0,
+//     author: 'Omkar Godbole',
+//     title: 'Bulls Exit BitMEX Bitcoin Futures Market',
+//     description:
+//         'Since the announcement from U.S. regulators, BitMEX has witnessed an outflow of more than 40,000 bitcoins, currently worth more than $422 million.',
+//     imageUrl:
+//         'https://static.coindesk.com/wp-content/uploads/2020/10/BitMEX-1180x628.png',
+// },
 
-const NewsCard = (props) => {
-  
-  return(
-    <View style = {[styles.container,{backgroundColor:props.color}]}>
-      <View style = {styles.imag}>
-        <Image source = {{uri:props.img}} style = {{minWidth: Dimensions.get('window').width, minHeight:150}}/>
-      </View>
-      
-      <View style = {styles.texts}>
-        <Text style = {styles.text}>{props.title}</Text>
-        <Text>{props.desc}</Text>
-      </View>
-      
-      
-      
-    </View>
-  );
-};
+const NewsCard = ({ news }) => {
+    return (
+        <View style={styles.container}>
+            <Image
+                source={{ uri: news.imageUrl }}
+                style={styles.image}
+            />
+            <Text style={styles.title}>{news.title}</Text>
+            <Text style={styles.description}>{news.description}</Text>
+        </View>
+    );
+}
 
-export default NewsCard;
+export { NewsCard };
 
 const styles = StyleSheet.create({
-  container : {
-    flexDirection: 'column',
-    alignItems : 'center',
-    backgroundColor: '#eceff1',
-    padding: 10,
-    margin: 10,
-    borderRadius: 5,
-    
+    container: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#e0e0e0',
+        padding: 5,
+        margin: 5,
+        borderRadius: 5,
     },
-    imag :{
-     
-      paddingHorizontal: 20,
-      
-      
-
+    title: {
+        fontWeight: 'bold',
+        fontSize: 18
     },
-
-    texts:{
-      
+    description: {
     },
-  text:{
-    
-    fontSize: 20,
-    fontWeight:'bold',
+    image: {
+        height: Dimensions.get('window').height * 0.30, 
+        borderRadius: 5,
+    }
 
-  },
-});
+})

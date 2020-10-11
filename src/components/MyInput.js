@@ -13,7 +13,7 @@ const MyInput = (props) => {
       />
   )
 };
-export default MyInput;
+export {MyInput};
 
 const styles = StyleSheet.create({
   containerInput:{
