@@ -1,114 +1,85 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { SafeAreaView, View, Text, Button } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const App = () => {
 
-const App: () => React$Node = () => {
+  const pressFunction = () => {
+    // Spread Operator
+    const user = {
+      name: "Ezran",
+      age: 28,
+      isAdmin: false
+    }
+
+    const member = {
+      name: user.name,
+      age: user.age,
+      isAdmin: user.isAdmin,
+      password: "12345",
+      type: null
+    }
+
+    const myArr = [1, 2, 3, 4];
+    const secArr = [ "İzmir", "Ankara", ...myArr  ]
+
+    const newArr = [...myArr]
+
+    // console.log(secArr)
+    // console.log(newArr)
+
+    // Destruction Operator
+    const myObj = {
+      url: "www.google.com",
+      data: [1, 2, 3],
+      config: "EMPTY"
+    }
+
+    const {config, url} = myObj
+
+    console.log(config);
+    console.log(url);
+
+    //
+    // (event) => {
+      // event.target
+      //
+      //
+      //
+    //   event.domain
+    // }
+
+    ({target, domain}) => {
+      target
+      //
+      //
+      //
+      domain
+    }
+
+
+  }
+
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Hello React Native </Text>
+        <Button title='Log' onPress={pressFunction} />
+      </View>
+    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
-
 export default App;
+
+{/* 
+  <Button title='Log' onPress={pressFunction} />
+  =>
+  <Button title='Log' onPress={() => {
+      console.log("Merhaba!")
+    }} />
+
+
+  <Button title='Log' onPress={pressFunction()} />
+  =>
+  <Button title='Log' onPress={console.log("Merhaba!")} />
+*/}
