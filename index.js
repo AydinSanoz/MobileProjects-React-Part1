@@ -8,6 +8,7 @@ import Flex from './src/Flex';
 import MyNewsPage from './src/MyNewsPage';
 import News from './src/News';
 import Main from './src/Main';
+import App from './src/App';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => News);
+AppRegistry.registerComponent(appName, () => App);

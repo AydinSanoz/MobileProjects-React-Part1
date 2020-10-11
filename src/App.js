@@ -8,10 +8,7 @@ const App = ()  => {
     <SafeAreaView style = {{flex:1,backgroundColor:'yellow'}}>
       
       <Text>Hello React Native</Text>
-      <Button
       
-      
-      />
      
     </SafeAreaView>
 
