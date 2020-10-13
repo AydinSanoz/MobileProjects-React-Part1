@@ -27,15 +27,13 @@ export {MyNewsBanner} ;
 
 const styles = StyleSheet.create({
     container:{
-        
-
+        flex:1
     },
     Image:{
-        
         justifyContent: 'flex-end',
-        width : Dimensions.get('window').width * 0.90,
+        width : Dimensions.get('window').width * 0.70,
         height: Dimensions.get('window').height * 0.20,
-        resizeMode: 'contain',
+        resizeMode: "contain",
         
         margin: 10,
         

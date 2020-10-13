@@ -99,7 +99,7 @@ const MyNewsPage = () =>{
                     data = {banner_data}
                     renderItem = {renderBanner}
                     keyExtractor= {(item,index) => item.id.toString()}
-                    
+            
                 />
             </View>
 
@@ -107,7 +107,7 @@ const MyNewsPage = () =>{
                 data = {news_data}
                 renderItem = {renderNewsData}
                 keyExtractor={(item,index) => index.toString()}
-                // numColumns = {2}
+                numColumns = {2}
             />
         </SafeAreaView>
     )

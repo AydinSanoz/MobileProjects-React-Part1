@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View,Image,StyleSheet} from 'react-native';
+import { Text, View,Image,StyleSheet,Dimensions} from 'react-native';
 
 
 const MyNewsCard = ({newsData}) => {
@@ -26,6 +26,7 @@ export {MyNewsCard};
 
 const styles = StyleSheet.create({
     container:{
+        flex: 1,
         margin:10,
         padding:10,
         borderRadius:20,
@@ -33,8 +34,8 @@ const styles = StyleSheet.create({
 
     },
     Image:{
-        resizeMode: "cover",
-        height: 250,
+        resizeMode: "contain",
+        height: Dimensions.get('window').height * 0.20,
     },
     Title:{
         fontWeight : '800',
