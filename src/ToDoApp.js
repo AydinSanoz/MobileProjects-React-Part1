@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, SafeAreaView, StyleSheet, View,Text, KeyboardAvoidingView, Platform } from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, View,Text, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import {Header} from './components/';
 import AddTodo from './components/AddToDo';
 import ToDoItem from './components/ToDoItem';
@@ -29,18 +29,18 @@ const ToDoApp = () =>{
     const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
 
     return(
-        <SafeAreaView style = {{flex:1, backgroundColor:'#333'}}>
-            <KeyboardAvoidingView behavior = {Platform.OS =='ios'? 'padding': 'height'}>
+        <SafeAreaView style = {{flex : 1, backgroundColor:'#333',margin:5}}>
 
+            <KeyboardAvoidingView behavior = {Platform.OS =='ios'? 'padding': 'height'}>
                 <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
-                <View>
-                    <FlatList scrol bounces= 'false'
+                
+                    <FlatList bounces = 'false'
                         data = {todos}
                         renderItem = {renderItem}
                     />
-                </View>
                
+                   
             </KeyboardAvoidingView>
         </SafeAreaView>
     )
