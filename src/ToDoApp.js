@@ -28,15 +28,16 @@ const ToDoApp = () =>{
     const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
 
     return(
-        <SafeAreaView style = {{flex :1,backgroundColor:'#333'}}>
-            <View>
+        <SafeAreaView style = {{flex:1, backgroundColor:'#333'}}>
+            <View >
                 <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
-               
-                    <FlatList
+                <View>
+                    <FlatList 
                         data = {todos}
                         renderItem = {renderItem}
                     />
+                </View>
                
                 
             </View>
