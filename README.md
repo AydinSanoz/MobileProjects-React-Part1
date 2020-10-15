@@ -24,11 +24,12 @@ Purpose of the this portfolio building will include my React Native Projects
 
 ---
 # Project 009 - News Page
+- ![Project 010 NewsPage](./images/newspage.gif)
 
 
 ---
-# Project 010 - To-Do List
-- ![Project 010 To-Do List]
+# Project 010 - To-Do App
+- ![Project 011 To-Do App](./images/todoApp.gif)
 
 ## Happy Coding!
 

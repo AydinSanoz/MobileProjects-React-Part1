@@ -25,23 +25,26 @@ const ToDoApp = () =>{
         setTodos((prevtodos)=>(prevtodos.filter((todo)=>todo.key !=key)))
     )
     
-    const deleteAll = () => (confirm('Are You sure'))
+    const deleteAll = () => {
+        confirm('Are You sure')}
+        
     const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
 
     return(
         <SafeAreaView style = {{flex : 1, backgroundColor:'#333',margin:5}}>
 
-            <KeyboardAvoidingView behavior = {Platform.OS =='ios'? 'padding': 'height'}>
+                
+                <FlatList bounces = 'false'
+                    data = {todos}
+                    renderItem = {renderItem}
+                    keyExtractor = {(item,index) => index.toString()}
+                />
+            <KeyboardAvoidingView style = {{justifyContent:'flex-end'}}behavior = {Platform.OS =='ios' ? 'padding': null}>
                 <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
-                
-                    <FlatList bounces = 'false'
-                        data = {todos}
-                        renderItem = {renderItem}
-                    />
+            </KeyboardAvoidingView>
                
                    
-            </KeyboardAvoidingView>
         </SafeAreaView>
     )
 }

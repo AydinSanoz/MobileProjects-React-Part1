@@ -7,7 +7,8 @@ console.log("ToDoItem -> item", item)
     return(
         <TouchableOpacity 
             style = {styles.touchableContainer}
-            onPress = {()=> pressHandler(item.key)}
+            onLongPress = {()=> pressHandler(item.key)}
+            
         
         >
             <Text style = {styles.text}>{item.text}</Text>
