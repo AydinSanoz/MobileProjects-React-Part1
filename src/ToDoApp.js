@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {FlatList, SafeAreaView, StyleSheet, View,Text } from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, View,Text, KeyboardAvoidingView, Platform } from 'react-native';
 import {Header} from './components/';
 import AddTodo from './components/AddToDo';
 import ToDoItem from './components/ToDoItem';
@@ -12,13 +12,14 @@ const ToDoApp = () =>{
             {text : 'Çocukları al', id: 12,},
         ])
 
-    const submitHandler = (text) =>(
+    const submitHandler = (text) =>{
+       
         setTodos((prevtodos) => (
             [
                 {text: text, key : Math.random().toString()},
                 ...prevtodos  
             ]
-        )))
+        ))}
     
     const pressHandler = (key) => (
         setTodos((prevtodos)=>(prevtodos.filter((todo)=>todo.key !=key)))
@@ -29,18 +30,18 @@ const ToDoApp = () =>{
 
     return(
         <SafeAreaView style = {{flex:1, backgroundColor:'#333'}}>
-            <View >
+            <KeyboardAvoidingView behavior = {Platform.OS =='ios'? 'padding': 'height'}>
+
                 <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
                 <View>
-                    <FlatList 
+                    <FlatList scrol bounces= 'false'
                         data = {todos}
                         renderItem = {renderItem}
                     />
                 </View>
                
-                
-            </View>
+            </KeyboardAvoidingView>
         </SafeAreaView>
     )
 }

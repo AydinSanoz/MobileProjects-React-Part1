@@ -12,6 +12,7 @@ const AddToDo = ({submitHandler, deleteAll}) => {
         <View style = {styles.containerAddToDo}>
             <View >
                 <TextInput
+                    value = {text}
                     style = {styles.textInput}
                     placeholder= 'Enter toDo text'
                     onChangeText = {updateText}
@@ -21,8 +22,10 @@ const AddToDo = ({submitHandler, deleteAll}) => {
             <View style = {styles.button}>
                 <Button 
                     title = 'Add'
-                    onPress = {() =>{submitHandler(text)}}
-                    
+                    onPress = {() =>{
+                        setText("");
+                        text !== "" && submitHandler(text)
+                    }}     
                 />
                 <Button 
                     title = 'DeleteAll'
