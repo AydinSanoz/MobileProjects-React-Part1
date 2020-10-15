@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-const AddToDo = ({submitHandler}) => {
+const AddToDo = ({submitHandler, deleteAll}) => {
 
     
     const [text, setText] = useState('')
@@ -20,8 +20,13 @@ const AddToDo = ({submitHandler}) => {
 
             <View style = {styles.button}>
                 <Button 
-                    title = 'Submit'
+                    title = 'Add'
                     onPress = {() =>{submitHandler(text)}}
+                    
+                />
+                <Button 
+                    title = 'DeleteAll'
+                    onPress = {() =>{deleteAll}}
                     
                 />
             </View>
@@ -50,11 +55,13 @@ const styles = StyleSheet.create({
         borderRadius:10,
     },
     button:{
+        flexDirection:"row",
+        justifyContent : 'space-between',
         backgroundColor : '#b39ddb20',
         margin:10,
         padding:3,
-        maxWidth : 100,
+        
         borderRadius:10,
-        alignSelf :'center'
+        
     },
 })

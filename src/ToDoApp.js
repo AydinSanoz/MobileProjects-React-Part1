@@ -24,17 +24,20 @@ const ToDoApp = () =>{
         setTodos((prevtodos)=>(prevtodos.filter((todo)=>todo.key !=key)))
     )
     
+    const deleteAll = () => (confirm('Are You sure'))
     const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
 
     return(
-        <SafeAreaView style = {{flex :1,backgroundColor:'black'}}>
+        <SafeAreaView style = {{flex :1,backgroundColor:'#333'}}>
             <View>
                 <Header todosLength = {todos.length}/>
-                <AddTodo submitHandler = {submitHandler} />
-                <FlatList
-                    data = {todos}
-                    renderItem = {renderItem}
-                />
+                <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
+               
+                    <FlatList
+                        data = {todos}
+                        renderItem = {renderItem}
+                    />
+               
                 
             </View>
         </SafeAreaView>
@@ -43,21 +46,3 @@ const ToDoApp = () =>{
 
 export default ToDoApp;
 
-const styles = StyleSheet.create({
-    touchableContainer: {
-        backgroundColor: '#e0e0e0',
-        margin: 10,
-        padding :10,
-        borderRadius:10,
-    },
-    textInputContainer:{
-        backgroundColor: '#e0e0e0',
-        margin: 10,
-        padding :10,
-        borderRadius:10,
-    },
-    button:{
-        margin:10,
-        padding:10,
-    },
-})
