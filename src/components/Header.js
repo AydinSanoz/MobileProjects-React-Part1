@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Header = () => {
+const Header = ({todosLength}) => {
+    console.log("Header -> todosLength", todosLength)
     return(
         <View style = {styles.container}>
             <Text style = {styles.textHeader}>ToDo List</Text>
-            <Text>item Counter : 0</Text>
+            <Text style = {{color : 'red'}}>item Counter : {todosLength}</Text>
         </View>
     )
 

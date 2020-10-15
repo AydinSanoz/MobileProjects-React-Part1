@@ -7,3 +7,4 @@
 // export * from './NewsCard';
 export * from './Header';
 export * from './AddToDo';
+export * from './ToDoItem';

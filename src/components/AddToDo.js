@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     textInput:{
         fontSize :18,
         margin:10,
-        paddingVertical: 20,
+        paddingVertical: 8,
         padding:10,
         backgroundColor : '#b39ddb60',
         borderRadius:10,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     button:{
         backgroundColor : '#b39ddb20',
         margin:10,
-        padding:10,
+        padding:3,
         maxWidth : 100,
         borderRadius:10,
         alignSelf :'center'

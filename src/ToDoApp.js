@@ -1,36 +1,42 @@
 import React, {useState} from 'react';
-import { Button, FlatList, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import {FlatList, SafeAreaView, StyleSheet, View,Text } from 'react-native';
 import {Header} from './components/';
 import AddTodo from './components/AddToDo';
+import ToDoItem from './components/ToDoItem';
 
 const ToDoApp = () =>{
 
     const [todos, setTodos] = useState(
         [
-            {title : 'Eve Git', id : 11,},
-            {title : 'Çocukları al', id: 12,},
+            {text : 'Eve Git', key : 11,},
+            {text : 'Çocukları al', id: 12,},
         ])
 
-    const submitHandler = (text) =>{
-        setTodos((prevtodos) => {
-            return[
-                {
-                    title: text,
-                    id : Math.random().toString()
-                },
+    const submitHandler = (text) =>(
+        setTodos((prevtodos) => (
+            [
+                {text: text, key : Math.random().toString()},
                 ...prevtodos  
             ]
-        })
-    }
-
+        )))
+    
+    const pressHandler = (key) => (
+        setTodos((prevtodos)=>(prevtodos.filter((todo)=>todo.key !=key)))
+    )
+    
+    const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
 
     return(
         <SafeAreaView style = {{flex :1,backgroundColor:'black'}}>
             <View>
-                <Header/>
+                <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} />
+                <FlatList
+                    data = {todos}
+                    renderItem = {renderItem}
+                />
+                
             </View>
-
         </SafeAreaView>
     )
 }
