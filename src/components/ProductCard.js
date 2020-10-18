@@ -18,8 +18,13 @@ const ProductCard = ({ product }) => {
             />
             <View style={{ flex: 1, justifyContent: 'space-between' }}>
                 <Text>{product.title}</Text>
-                <Text style={{ fontWeight: 'bold' }}>{product.price}</Text>
             </View>
+            <View style= {{flexDirection:"row", justifyContent: "space-between"}}>
+                <Text style={{ fontWeight: 'bold' }}>{product.price}</Text>
+                <Text style={{ backgroundColor:'yellow',color:'red',fontWeight: 'bold' }}>{!product.inStock && 'Not in Stock'}</Text>
+
+            </View>
+
         </View>
     )
 }
