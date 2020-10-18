@@ -1,18 +1,27 @@
 // Overall - 1
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView, View, Text, FlatList, StyleSheet, Alert, TextInput } from 'react-native';
-import proudctData from './product_data.json'
+import productData from './product_data.json'
 
 import { ProductCard } from './components'
 
 const App = () => {
     const [searchValue, setSearchValue] = useState("");
+    const [displayData, setDisplayData] = useState([]);
+    
 
     const renderListItem = ({ item }) => <ProductCard product={item} />
 
     useEffect(() => {
-        // Alert.alert("Clarushop", "Hoşgeldiniz, keyifli alışverişler..");
-    }, [])
+        setDisplayData(productData)
+        const Text = searchValue.toLowerCase();
+        const filteredData = productData.filter((product) => {
+            return (product.title.toLowerCase().includes(Text))
+        });
+        console.log("App -> filteredData", filteredData)
+        setDisplayData(filteredData)
+        
+    }, [searchValue])
 
 
     return (
@@ -29,7 +38,7 @@ const App = () => {
 
                 <FlatList
                     keyExtractor={(_, index) => index.toString()}
-                    data={proudctData}
+                    data={displayData}
                     renderItem={renderListItem}
                     numColumns={2}
                 />
