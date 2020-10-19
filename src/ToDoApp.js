@@ -8,7 +8,7 @@ const ToDoApp = () =>{
 
     const [todos, setTodos] = useState(
         [
-            {text : 'Eve Git', key : 11, isDone : false},
+            {text : 'Eve Git', key : 11, isDone : true},
             {text : 'Çocukları al', key: 12, isDone : true},
         ])
 
@@ -44,7 +44,7 @@ const ToDoApp = () =>{
     return(
         <SafeAreaView style = {{flex : 1, backgroundColor:'#333',margin:5}}>
 
-                <Header todosLength = {todos.length}/>
+                <Header todosLength = {(todos.filter(todo =>todo.isDone == false)).length}/>
                 
                 <FlatList bounces = 'false'
                     data = {todos}

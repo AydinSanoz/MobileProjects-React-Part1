@@ -9,8 +9,8 @@ import {AppRegistry} from 'react-native';
 // import Flex from './src/Flex';
 // import LoginPage from './src/LoginPage';
 // import MyNewsPage from './src/MyNewsPage';
-// import ToDoApp from './src/ToDoApp';
-import App from './src/Shopping'
+import ToDoApp from './src/ToDoApp';
+// import Shopping from './src/Shopping'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => ToDoApp);

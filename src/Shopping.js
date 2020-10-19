@@ -5,7 +5,7 @@ import productData from './product_data.json'
 
 import { ProductCard } from './components'
 
-const App = () => {
+const Shopping = () => {
     const [searchValue, setSearchValue] = useState("");
     const [displayData, setDisplayData] = useState([]);
     
@@ -18,7 +18,7 @@ const App = () => {
         const filteredData = productData.filter((product) => {
             return (product.title.toLowerCase().includes(Text))
         });
-        console.log("App -> filteredData", filteredData)
+        console.log("Shopping -> filteredData", filteredData)
         setDisplayData(filteredData)
         
     }, [searchValue])
@@ -47,7 +47,7 @@ const App = () => {
     )
 }
 
-export default App;
+export default Shopping;
 
 const styles = StyleSheet.create({
     banner: {
