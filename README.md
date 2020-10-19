@@ -62,17 +62,19 @@ Purpose of the this portfolio building will include my React Native Projects
 
 <tr>
   <td>
-  <p align ='center'>Project 008 - Login Page </p>
-  <img src = "./images/loginPage.gif">
-  </td>
-
-  <td>
   <p align ='center'> Project 009 - News Page <p>
   <img src = "./images/newspage.gif">
   </td>
+  
+  <td>
+  <p align ='center'>Project 010 - Login Page </p>
+  <img src = "./images/loginPage.gif">
+  </td>
+
+  
 
   <td>
-  <p align ='center'> Project 010 - To-Do App</p>
+  <p align ='center'> Project 011 - To-Do App</p>
   <img src = "./images/todoApp.gif">
   </td>
 </tr>
@@ -108,17 +110,15 @@ Purpose of the this portfolio building will include my React Native Projects
 - ![ShoppingPage](./images/shopping.gif)
 
 ---
-# Project 008 - Login Page
-! [Project 008 Login Page](./images/Screen%20Shot%202020-10-12%20at%2023.29.37.png)
-
-
----
 # Project 009 - News Page
 - ![Project 010 NewsPage](./images/newspage.gif)
 
+---
+# Project 010 - Login Page
+! [Project 008 Login Page](./images/Screen%20Shot%202020-10-12%20at%2023.29.37.png)
 
 ---
-# Project 010 - To-Do App
+# Project 011 - To-Do App
 - ![Project 011 To-Do App](./images/todoApp.gif) -->
 
 ## Happy Coding!
