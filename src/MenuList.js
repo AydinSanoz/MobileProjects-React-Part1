@@ -42,7 +42,7 @@ const food_data = [
   },
 ];
 
-const App = () =>{
+const MenuList = () =>{
 
   return(
     <SafeAreaView style = {{flex:1, backgroundColor : "#e6ceff"}}>
@@ -67,5 +67,5 @@ const App = () =>{
   )
 }
 
-export default App;
+export default MenuList;
 

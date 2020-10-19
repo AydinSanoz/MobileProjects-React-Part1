@@ -5,7 +5,7 @@ import proudctData from './product_data.json'
 
 import { ProductCard } from './components'
 
-const App = () => {
+const ClarusShop = () => {
     const [searchValue, setSearchValue] = useState("");
 
     const renderListItem = ({ item }) => <ProductCard product={item} />
@@ -38,7 +38,7 @@ const App = () => {
     )
 }
 
-export default App;
+export default ClarusShop;
 
 const styles = StyleSheet.create({
     banner: {
