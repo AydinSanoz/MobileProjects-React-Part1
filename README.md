@@ -55,15 +55,15 @@ Purpose of the this portfolio building will include my React Native Projects
 
 <table>
 <tr>
-  <th> Project-8 </th>
-  <th> Project-9 </th>
-  <th> Project-10 </th>
+  <th> Project-008 </th>
+  <th> Project-009 </th>
+  <th> Project-010 </th>
 </tr>
 
 <tr>
   <td>
   <p align ='center'>Project 008 - Login Page </p>
-  <img src = "./images/todoApp.gif">
+  <img src = "./images/loginPage.gif">
   </td>
 
   <td>

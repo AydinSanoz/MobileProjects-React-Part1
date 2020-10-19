@@ -9,6 +9,8 @@ const MyInput = (props) => {
         keyboardType = {props.type}
         autoCapitalize = {props.capitalize}
         onChangeText = {props.onChangeText}
+        secureTextEntry = {props.secureEntry}
+        
         
       />
   )

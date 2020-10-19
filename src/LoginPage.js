@@ -17,7 +17,7 @@ const LoginPage = () =>{
             source ={require('./assets/cart.png')}>
           </Image>
           <MyInput title = " E-mail" type = "email-address" capitalize = {"none"}/>
-          <MyInput title = " password" type = "numeric"/>
+          <MyInput title = " password" type = "default" secureEntry ={true}/>
           <MyButton buttonTitle = "Sign in" onPress = {(signIn)}/>
           <MyButton buttonTitle = "Log in" onLongPress = {(logIn)}/>
         </KeyboardAvoidingView>
