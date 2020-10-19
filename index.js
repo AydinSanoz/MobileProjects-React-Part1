@@ -9,7 +9,7 @@ import {AppRegistry} from 'react-native';
 // import Main from './src/Main';
 // import App from './src/App';
 // import Flex from './src/Flex';
-// import LoginPage from './src/LoginPage';
+import LoginPage from './src/LoginPage';
 import MyNewsPage from './src/MyNewsPage';
 // import ToDoApp from './src/ToDoApp';
 // import Shopping from './src/Shopping'
@@ -17,4 +17,4 @@ import MyNewsPage from './src/MyNewsPage';
 
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => MyNewsPage);
+AppRegistry.registerComponent(appName, () => LoginPage);

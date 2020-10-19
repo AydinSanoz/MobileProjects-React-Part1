@@ -1,5 +1,5 @@
-// export * from './MyButton';
-// export * from './MyInput';
+export * from './MyButton';
+export * from './MyInput';
 export * from './MyNewsCard';
 export * from './MyNewsBanner';
 // export * from './MyBanner';
