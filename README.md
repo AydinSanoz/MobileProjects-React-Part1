@@ -51,8 +51,59 @@ Purpose of the this portfolio building will include my React Native Projects
 - Part 8 - React Redux
   
 ---
+##  React-Native Projects
 
-# Practice 001 - ShoppingPage
+<table>
+<tr>
+  <th> Project-8 </th>
+  <th> Project-9 </th>
+  <th> Project-10 </th>
+</tr>
+
+<tr>
+  <td>
+  <p align ='center'>Project 008 - Login Page </p>
+  <img src = "./images/todoApp.gif">
+  </td>
+
+  <td>
+  <p align ='center'> Project 009 - News Page <p>
+  <img src = "./images/newspage.gif">
+  </td>
+
+  <td>
+  <p align ='center'> Project 010 - To-Do App</p>
+  <img src = "./images/todoApp.gif">
+  </td>
+</tr>
+</table>
+
+---
+
+
+<table>
+<tr>
+  <th>Practice 001
+  <th>Practice 002
+  <th>Practice 003
+</tr>
+  <td>
+  <p align ='center'> ClarusShopping Page <p>
+  <img src = "./images/clarusShopping.gif">
+  </td>
+  <td>
+  <p align ='center'> ClarusShopping Page <p>
+  <img src = "./images/clarusShopping.gif">
+  </td>
+  <td>
+  <p align ='center'> ClarusShopping Page <p>
+  <img src = "./images/clarusShopping.gif">
+  </td>
+
+</table>
+---
+
+<!-- # Practice 001 - ShoppingPage
 
 - ![ShoppingPage](./images/shopping.gif)
 
@@ -68,7 +119,7 @@ Purpose of the this portfolio building will include my React Native Projects
 
 ---
 # Project 010 - To-Do App
-- ![Project 011 To-Do App](./images/todoApp.gif)
+- ![Project 011 To-Do App](./images/todoApp.gif) -->
 
 ## Happy Coding!
 
@@ -89,3 +140,19 @@ open /usr/local/Cellar/x-quartz/2.7.4/XQuartz.pkg # runs the XQuartz installer (
 brew install gifsicle
 - paste this command line to your terminal 
   ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+
+
+
+  <!-- ```c++
+int foo() {
+    int result = 4;
+    return result;
+}
+``` -->
+
+```c++
+int foo() { 
+    int x = 4;
+    return x;
+}
+```
