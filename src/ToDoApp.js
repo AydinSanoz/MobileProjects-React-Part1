@@ -8,15 +8,15 @@ const ToDoApp = () =>{
 
     const [todos, setTodos] = useState(
         [
-            {text : 'Eve Git', key : 11,},
-            {text : 'Çocukları al', id: 12,},
+            {text : 'Eve Git', key : 11, isDone : false},
+            {text : 'Çocukları al', key: 12, isDone : true},
         ])
 
     const submitHandler = (text) =>{
        
         setTodos((prevtodos) => (
             [
-                {text: text, key : Math.random().toString()},
+                {text: text, key : Math.random().toString(), isDone : false},
                 ...prevtodos  
             ]
         ))}
@@ -25,14 +25,26 @@ const ToDoApp = () =>{
         setTodos((prevtodos)=>(prevtodos.filter((todo)=>todo.key !=key)))
     )
     
-    const deleteAll = () => {
-        confirm('Are You sure')}
+    const isDone = (key) =>{
+        const newArray = [...todos]
+        const todoIndex = newArray.findIndex(todo => todo.key==key)
+        newArray[todoIndex].isDone = !newArray[todoIndex].isDone
+        setTodos(newArray)
+    }
+
         
-    const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler}/>)
+    
+    
+    const deleteAll = () => {
+        setTodos("")
+    }
+        
+    const renderItem = ({item})=>(<ToDoItem item = {item} pressHandler = {pressHandler} pressDone = {isDone}/>)
 
     return(
         <SafeAreaView style = {{flex : 1, backgroundColor:'#333',margin:5}}>
 
+                <Header todosLength = {todos.length}/>
                 
                 <FlatList bounces = 'false'
                     data = {todos}
@@ -40,7 +52,6 @@ const ToDoApp = () =>{
                     keyExtractor = {(item,index) => index.toString()}
                 />
             <KeyboardAvoidingView style = {{justifyContent:'flex-end'}}behavior = {Platform.OS =='ios' ? 'padding': null}>
-                <Header todosLength = {todos.length}/>
                 <AddTodo submitHandler = {submitHandler} deleteAll = {deleteAll} />
             </KeyboardAvoidingView>
                

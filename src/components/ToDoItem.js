@@ -1,17 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const ToDoItem = ({item, pressHandler}) => {
+const ToDoItem = ({item, pressHandler, pressDone}) => {
 console.log("ToDoItem -> item", item)
     
     return(
         <TouchableOpacity 
             style = {styles.touchableContainer}
             onLongPress = {()=> pressHandler(item.key)}
+            onPress ={() => pressDone(item.key)}
             
         
         >
-            <Text style = {styles.text}>{item.text}</Text>
+            <Text style = {[styles.text, 
+            {textDecorationLine : item.isDone ? "line-through":null}]}>{item.text}</Text>
             <Text style = {styles.text,{color:'red', fontSize:20}}> x </Text>
         </TouchableOpacity>
     )

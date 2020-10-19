@@ -15,7 +15,46 @@ Purpose of the this portfolio building will include my React Native Projects
 - Part 1 - Components
   
 - Part 2 - Styling
+  
+- Part 3 - Views & Text
+- - ListViews (Flat List and Section List)
+- - Scroll View & Text Input
 
+- Part 4 -Button & Modals
+- - TouchableOpacity
+- - TouchableHighlight
+- - TouchableNativeFeedback
+- - TouchableWithoutFeedback
+- - Modals
+- - Alert
+  
+- Part 5 - React Native Lifecycle
+- - The Component Lifecycle
+- - Mount
+- - Updating
+- - Unmounting
+
+- Part 6 - React Navigation
+- - NavigationContainer 
+- - createStackNavigator
+- - Stack.Navigator
+- - Stack.Screen
+
+- Part 7 - Other Elements/API
+- - Image
+- - Animated
+- - ActivityIndicator 
+- - StatusBar  
+- - Switch 
+- - ImageBackground
+
+- Part 8 - React Redux
+  
+---
+
+# Practice 001 - ShoppingPage
+
+- ![ShoppingPage](./images/shopping.gif)
 
 ---
 # Project 008 - Login Page

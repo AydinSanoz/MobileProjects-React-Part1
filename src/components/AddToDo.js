@@ -29,7 +29,7 @@ const AddToDo = ({submitHandler, deleteAll}) => {
                 />
                 <Button 
                     title = 'DeleteAll'
-                    onPress = {() => deleteAll}
+                    onPress = {() => deleteAll()}
                     
                 />
             </View>
