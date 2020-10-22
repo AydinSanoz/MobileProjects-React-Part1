@@ -63,12 +63,12 @@ Purpose of the this portfolio building will include my React Native Projects
 <tr>
   <td>
   <p align ='center'> Project 009 - News Page <p>
-  <img src = "./images/mynewspage.gif">
+  <img src = "./images/loginPage.gif">
   </td>
   
   <td>
   <p align ='center'>Project 010 - Login Page </p>
-  <img src = "./images/loginPage.gif">
+  <img src = "./images/mynewspage.gif">
   </td>
 
   
