@@ -15,11 +15,17 @@ console.log("ReverseInput -> props", props.Reverse)
                 placeholder = {props.placeHolder}
                 placeholderTextColor ='white'
                 onChangeText = {(val)=> setUserVal(val)}
+                value = {userVal}
+
             >
             </TextInput>
             <Button
                 title = {props.reverseStringButton}
-                onPress = {()=>props.onReverseString(userVal)}
+                onPress = {()=>{
+                    props.onReverseString(userVal)
+                    setUserVal('')
+                    }
+                }
             />
             <Button
                 title = {props.reverseWordButton}
@@ -38,9 +44,10 @@ const styles = StyleSheet.create({
         
         backgroundColor: '#00000090',
         color : 'white',
-        margin: 5,
+        margin: 10,
         padding: 10,
         borderRadius: 4,
+        fontSize: 20,
         
         
     }

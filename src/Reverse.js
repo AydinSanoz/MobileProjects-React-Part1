@@ -34,8 +34,9 @@ export default Reverse ;
 const styles = StyleSheet.create({
     Text:{
         margin:10,
+        
         color : 'red',
-        fontSize : 30,
+        fontSize : 50,
         textAlign :'center',
         fontWeight : 'bold',
 
