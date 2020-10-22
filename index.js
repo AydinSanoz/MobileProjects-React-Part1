@@ -19,4 +19,4 @@ import Shopping from './src/Shopping';
 
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => LoginPage);
+AppRegistry.registerComponent(appName, () => MyNewsPage);
