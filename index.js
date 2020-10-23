@@ -14,9 +14,10 @@ import LoginPage from './src/LoginPage';
 import MyNewsPage from './src/MyNewsPage';
 import ToDoApp from './src/ToDoApp';
 import Shopping from './src/Shopping';
+import Main from './src/Main';
 
 
 
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => MyNewsPage);
+AppRegistry.registerComponent(appName, () => Main);

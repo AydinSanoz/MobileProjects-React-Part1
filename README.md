@@ -99,7 +99,7 @@ Purpose of the this portfolio building will include my React Native Projects
   </td>
   <td>
   <p align ='center'> First News Practice <p>
-  <img src = "./images/newspage.gif">
+  <img src = "./images/todo.gif">
   </td>
 
 </table>
