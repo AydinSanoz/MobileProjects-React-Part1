@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet,TouchableOpacity,TextInput,Dimensions, View,Text} from 'react-native';
 
-const ReverseInput = (props) => {
+const NumberInput = (props) => {
 
   const [inputVal, setInputVal] = useState('')
 
@@ -30,7 +30,7 @@ const ReverseInput = (props) => {
       
   )
 };
-export {ReverseInput};
+export {NumberInput};
 
 const styles = StyleSheet.create({
   containerInput:{

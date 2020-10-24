@@ -9,3 +9,4 @@ export * from './Header';
 export * from './AddToDo';
 export * from './ToDoItem';
 export * from './ProductCard';
+export * from './NumberInput';
