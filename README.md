@@ -148,12 +148,12 @@ Then
   ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
 ```
 
-  <!-- ```c++
+<!-- ```c++
 int foo() {
     int result = 4;
     return result;
 }
-``` -->
+``` 
 
 ```c++
 int foo() { 
@@ -161,3 +161,4 @@ int foo() {
     return x;
 }
 ```
+-->
