@@ -133,15 +133,20 @@ Purpose of the this portfolio building will include my React Native Projects
 
 - Save your screen recording as the name ' in.mov'
 - open a terminal at the same folder in.mov file.
-- if not installed this do these firs
+- if not installed this do these first
+
+```bash
 brew install ffmpeg 
 brew cask install xquartz #dependency for gifsicle, only required for mountain-lion and above
 open /usr/local/Cellar/x-quartz/2.7.4/XQuartz.pkg # runs the XQuartz installer (YOU NEED TO UPDATE THE PATH)
 brew install gifsicle
+```
+Then
+
+```shell
 - paste this command line to your terminal 
   ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
-
-
+```
 
   <!-- ```c++
 int foo() {
