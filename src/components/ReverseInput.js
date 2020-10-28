@@ -1,56 +1,54 @@
 import React, {useState} from 'react';
-import {StyleSheet,TouchableOpacity,TextInput,Dimensions, View,Text} from 'react-native';
+import {View,Text, TextInput, StyleSheet, Button} from 'react-native';
 
-const ReverseInput = (props) => {
+const ReverseInput = (props) =>{
+console.log("ReverseInput -> props", props.Reverse)
+    
+    const [userVal, setUserVal] = useState('');
+    
+    
 
-  const [inputVal, setInputVal] = useState('')
+    return(
+        <View>
+            <TextInput
+                style = {styles.container}
+                placeholder = {props.placeHolder}
+                placeholderTextColor ='white'
+                onChangeText = {(val)=> setUserVal(val)}
+                value = {userVal}
 
+            >
+            </TextInput>
+            <Button
+                title = {props.reverseStringButton}
+                onPress = {()=>{
+                    props.onReverseString(userVal)
+                    setUserVal('')
+                    }
+                }
+            />
+            <Button
+                title = {props.reverseWordButton}
+                onPress = {()=>props.onReverseWord(userVal)}
+            />
+            
+            <Text style = {styles.container}>{props.result}</Text>
+        </View>
+    )
+}
 
-
-  return(
-      <View>
-      <TextInput
-        style = {styles.containerInput} 
-      
-        placeholder = {props.title}
-        keyboardType = {props.type}
-        autoCapitalize = {props.capitalize}
-        onChangeText = {(letter)=>setInputVal(letter)}
-        
-      />
-      
-      <TouchableOpacity
-        style={styles.containerButton}
-        onPress={()=>{props.onPress(inputVal)}}
-        onLongPress={props.onLongPress}>
-        <Text style={styles.Text}>{props.buttonTitle}</Text>
-      </TouchableOpacity>
-      
-      </View>
-      
-  )
-};
-export {ReverseInput};
+export default ReverseInput;
 
 const styles = StyleSheet.create({
-  containerInput:{
-    backgroundColor: '#e8eaf6',
-    margin :10,
-    padding:20,
-    borderRadius:10,
-  },
-  containerButton: {
-    backgroundColor: '#90a4ae',
-    padding: 20,
-    margin: 10,
-    width: Dimensions.get('window').width / 2,
-    borderRadius: 10,
-    alignSelf: 'center',
-  },
-  Text: {
-    color: 'white',
-    alignSelf: 'center',
-    fontWeight: 'bold',
-    fontSize: 15,
-  },
+    container:{
+        
+        backgroundColor: '#00000090',
+        color : 'white',
+        margin: 10,
+        padding: 10,
+        borderRadius: 4,
+        fontSize: 20,
+        
+        
+    }
 })
