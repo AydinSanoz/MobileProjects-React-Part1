@@ -34,22 +34,6 @@ Purpose of the this portfolio building will include my React Native Projects
 - - Updating
 - - Unmounting
 
-- Part 6 - React Navigation
-- - NavigationContainer 
-- - createStackNavigator
-- - Stack.Navigator
-- - Stack.Screen
-
-- Part 7 - Other Elements/API
-- - Image
-- - Animated
-- - ActivityIndicator 
-- - StatusBar  
-- - Switch 
-- - ImageBackground
-
-- Part 8 - React Redux
-  
 ---
 ##  React-Native Projects
 
